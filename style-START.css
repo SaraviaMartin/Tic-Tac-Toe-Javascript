@@ -7,15 +7,15 @@ section{
 .game--container{
     display: grid;
     grid-template-columns: repeat(3, auto);
-    width: 200px;
+    width: 300px;
     margin: 50px auto;
 }
 .cell{
     font-family: "Permanent Marker", cursive;
     width: 100px;
     height: 100px;
-    box-shadow: 50 50 50 50px black;
-    border: 2px solid black;
-    line-height: 50px;
+    box-shadow: 0 0 0 01px black;
+    border: 1px solid black;
+    line-height: 1px;
     font-size: 60px;
 }
