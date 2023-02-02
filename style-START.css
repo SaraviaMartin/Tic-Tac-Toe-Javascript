@@ -1,7 +1,7 @@
 body{
     font-family: 'DM Sans', sans-serif;
-    color: white;
-    background-color: black;
+
+    background-color: white;
 }
 section{
     text-align: center;
@@ -16,8 +16,8 @@ section{
     font-family: "Permanent Marker", cursive;
     width: 100px;
     height: 100px;
-    box-shadow: 0 0 0 01px white;
-    border: 1px solid white;
+    box-shadow: 0 0 0 01px black;
+    border: 1px solid black;
     line-height: 1px;
     font-size: 60px;
 }
