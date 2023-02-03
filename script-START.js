@@ -9,7 +9,7 @@ const currentPlayerTurn = () => `Es el turno de ${currentPlayer}`;
 
 /*Vamos a dar un mensaje inicial para ver quien arranca el juego  */
 
-statusDisplay.innerHTML = currentPlayer();
+statusGame.innerHTML = currentPlayerTurn();
 function handleCellPlayed(clickedCell, clickedCellIndex){
     gameStatus[clickedCellIndex] = currentPlayer;
     clickedCell.innerHTML = currentPlayer;
@@ -30,14 +30,14 @@ function handlePlayerChange(){
 }
 
 const winningConditions = [
-    [0, 1, 2]
-    [3, 4, 5]
-    [6, 7, 8]
-    [0, 3, 6]
-    [1, 4, 7]
-    [2, 5, 8]
-    [0, 4, 8]
-    [2, 4, 6]
+    [0, 1, 2],
+    [3, 4, 5],
+    [6, 7, 8],
+    [0, 3, 6],
+    [1, 4, 7],
+    [2, 5, 8],
+    [0, 4, 8],
+    [2, 4, 6],
 ]
 function handleResultValidation(){
     let roundWon = false;
