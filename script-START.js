@@ -32,7 +32,7 @@ function handleCellClick(clickedCellEvent){
 
 function handlePlayerChange(){
     currentPlayer = currentPlayer === "X" ? "O" : "X";
-    statusGame.currentPlayer = currentPlayerTurn();
+    statusGame.innerHTML = currentPlayerTurn();
 }
 
 const winningConditions = [
@@ -48,14 +48,14 @@ const winningConditions = [
 function handleResultValidation(){
     let roundWon = false;
     for(let i = 0; i <=7; i++){
-        const winCondition = winCondition[i];
+        const winCondition = winningConditions[i];
         let a = gameStatus[winCondition[0]];
         let b = gameStatus[winCondition[1]];
         let c = gameStatus[winCondition[2]];
         if(a === ''|| b === ''|| c ===''){
             continue;
         }
-        if(a === b && b ===b){
+        if(a === b && b === c){
             roundWon = true;
             break;
         }
