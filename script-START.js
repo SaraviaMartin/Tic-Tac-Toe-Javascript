@@ -42,11 +42,37 @@ const winningConditions = [
 function handleResultValidation(){
     let roundWon = false;
     for(let i = 0; i <=7; i++){
-        
+        const winCondition = winCondition[i];
+        let a = gameStatus[winCondition[0]];
+        let b = gameStatus[winCondition[1]];
+        let c = gameStatus[winCondition[2]];
+        if(a === ''|| b === ''|| c ===''){
+            continue;
+        }
+        if(a === b && b ===b){
+            roundWon = true;
+            break;
+        }
     }
+        if(roundWon){
+            statusDisplay.innerHTML = victoryMensaje();
+            gameActive = false;
+            return;
+        } 
+        let roundDraw = !gameStatus.includes("");
+        if (roundDraw ){
+            statusDisplay.innerHTML = drawMensaje();
+            gameActive = false;
+            return;
+        }
 }
 
 function handleRestartGame(){
-
+    gameActive = true;
+    currentPlayer = "X";
+    gameStatus = ["", "", "", "", "", "", "", "", ""];
+    statusDisplay.innerHTML = currentPlayerTurn();
+    document.querySelectorAll('.cell')
+        .forEach(cell => cell.innerHTML = "");
 }
 
